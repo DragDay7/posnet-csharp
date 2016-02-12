@@ -182,7 +182,7 @@ namespace Posnet
         public Connection Connection { get; set; }
 
         /// <summary>
-        /// Manufacturer was drunk while making documentation to this parameter and I'm too lazy to check it myself so it's always 0.
+        /// Verify message or repeat last one.
         /// </summary>
         public Flags Flag { get; private set; }
 
