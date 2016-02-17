@@ -23,10 +23,10 @@ namespace Posnet
         /// <param name="parity">Parity.</param>
         /// <param name="dataBits">Data bits.</param>
         /// <param name="stopBits">Stop bits.</param>
-        public Connection(string port = "COM1", int baudRate = 9600, Parity parity = Parity.None, int dataBits = 8, StopBits stopBits = StopBits.One, int timeout = 250)
+        public Connection(string port = "COM1", int baudRate = 9600, Parity parity = Parity.None, int dataBits = 8, StopBits stopBits = StopBits.One, int timeout = 500)
         {
             SerialPort = new SerialPort(port, baudRate, parity, dataBits, stopBits);
-            SerialPort.WriteTimeout = timeout;
+            SerialPort.ReadTimeout = timeout;
             SerialPort.WriteTimeout = timeout;
             SerialPort.DataReceived += SerialPort_DataReceived;
         }
